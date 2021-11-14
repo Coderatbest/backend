@@ -1,0 +1,15 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  api:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/code
+    #command: ls
+  db:
+    image: mariadb:10.7.1
+    environment:
+      MYSQL_ROOT_PASSWORD: ${db_pass}
+volumes:
+  logvolume01: {}
