@@ -9,7 +9,8 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-# import environ
+import environ
+env = environ.Env()
 from pathlib import Path
 import dj_database_url
 
@@ -24,10 +25,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-dc4t95$q3v99glye(%nh*c+a9fw_iqgucjhk$1e46cr2g4avjj'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
-ALLOWED_HOSTS = []
+DEBUG = env.bool('DEPLOYED', default=True)
 
+ALLOWED_HOSTS = str(env('ALLOWED_HOSTS')).split(',')
+print(DEBUG,ALLOWED_HOSTS)
 #User models
 AUTH_USER_MODEL='users.User'
 

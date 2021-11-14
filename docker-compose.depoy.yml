@@ -2,11 +2,9 @@ version: "3.9"  # optional since v1.27.0
 services:
   api:
     build: ./backend
-    ports:
-      - "8000:8000"
-    volumes:
-      - ./backend:/home/django/app/
     environment:
+      DEPLOYED: ${DEPLOYED}
+      ALLOWED_HOSTS: ${ALLOWED_HOSTS}
       DATABASE_URL: ${DB_URL}
     depends_on:
       - db
@@ -15,5 +13,11 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: ${db_pass}
       MYSQL_DATABASE: coderatbest
+  proxi:
+    image: nginx:1.21.4-alpine
+    ports:
+      - "8000:80"
+    volumes:
+      - ./default.conf:/etc/nginx/conf.d/default.conf 
 volumes:
   logvolume01: {}
