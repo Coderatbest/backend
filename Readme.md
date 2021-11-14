@@ -29,3 +29,8 @@ python3  manage.py startapp utilies
 more information https://github.com/jacobian/dj-database-url
 - db_pass=password
 - DB_URL=mysql://USER:PASSWORD@HOST:PORT/NAME
+
+### migrations
+```
+docker-compose run api python manage.py makemigrations
+```

@@ -5,13 +5,16 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - ./backend:/code
+      - ./backend:/home/django/app/
     environment:
       DATABASE_URL: ${DB_URL}
+    depends_on:
+      - db
     #command: ls
   db:
     image: mariadb:10.7.1
     environment:
       MYSQL_ROOT_PASSWORD: ${db_pass}
+      MYSQL_DATABASE: coderatbest
 volumes:
   logvolume01: {}
