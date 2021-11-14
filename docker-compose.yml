@@ -6,6 +6,8 @@ services:
       - "8000:8000"
     volumes:
       - ./backend:/code
+    environment:
+      DATABASE_URL: ${DB_URL}
     #command: ls
   db:
     image: mariadb:10.7.1
