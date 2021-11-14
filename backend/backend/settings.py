@@ -28,8 +28,8 @@ SECRET_KEY = 'django-insecure-dc4t95$q3v99glye(%nh*c+a9fw_iqgucjhk$1e46cr2g4avjj
 
 DEBUG = env.bool('DEPLOYED', default=True)
 
-ALLOWED_HOSTS = str(env('ALLOWED_HOSTS')).split(',')
-print(DEBUG,ALLOWED_HOSTS)
+ALLOWED_HOSTS = [] if DEBUG else str(env('ALLOWED_HOSTS')).split(',')
+
 #User models
 AUTH_USER_MODEL='users.User'
 
@@ -131,7 +131,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': [
         'rest_framework.renderers.JSONRenderer',
-        #'rest_framework.renderers.BrowsableAPIRenderer',
     ],
     'DEFAULT_PARSER_CLASSES': [
         'rest_framework.parsers.JSONParser',
