@@ -1,7 +1,9 @@
 version: "3.9"  # optional since v1.27.0
 services:
   api:
-    build: ./backend
+    build:
+      context: ./backend
+      dockerfile: dockerfile.local
     ports:
       - "8000:8000"
     volumes:

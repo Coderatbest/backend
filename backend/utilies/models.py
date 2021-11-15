@@ -8,8 +8,8 @@ class defaultModels(models.Model):
     user_created = models.ForeignKey(
         'users.User',
         on_delete=models.CASCADE,
-        related_name='user_created_related_name',
-        related_query_name='user_created_query',
+        related_name="%(app_label)s_%(class)s_user_created_name",
+        related_query_name="%(app_label)s_%(class)s_user_created_query",
         null=True,
         blank=True
     )
@@ -21,6 +21,8 @@ class defaultModels(models.Model):
     user_modified = models.ForeignKey(
         'users.User',
         on_delete=models.CASCADE,
+        related_name="%(app_label)s_%(class)s_user_modified_name",
+        related_query_name="%(app_label)s_%(class)s_user_modified_query",
         null=True,
         blank=True
         )
