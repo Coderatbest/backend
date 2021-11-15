@@ -1,15 +1,15 @@
-# #django
-# from django.urls import path,include
-# # rest frameworks
-# from rest_framework.routers import DefaultRouter
-# # models
-# from .views import users as user_views
+#django
+from django.urls import path,include
+# rest frameworks
+from rest_framework.routers import DefaultRouter
+# models
+from commentaries import views as commentaries_viewset
 
 
-# router = DefaultRouter()
+router = DefaultRouter()
 
-# router.register(r'users',user_views.UsersViewSet,basename='auth')
+router.register(r'commentaries',commentaries_viewset.CommentariesViewSets,basename='auth')
 
-# urlpatterns = [
-#     path('',include(router.urls))
-# ]
+urlpatterns = [
+    path('',include(router.urls))
+]
