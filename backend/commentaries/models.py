@@ -1,7 +1,7 @@
 from django.db import models
 from utilies.models import defaultModels
 
-class Commentaries(defaultModels):
+class CommentariesModels(defaultModels):
     """
     Docs.
     """
