@@ -22,6 +22,6 @@ urlpatterns = [
     path(settings.ADMIN_URL, admin.site.urls),
     # path('', include(('users.urls', 'users'), namespace='user')),
     path('', include(('commentaries.urls', 'commentaries'), namespace='commentaries')),
-    # path('', include(('posts.urls', 'posts'), namespace='posts')),
+    path('', include(('posts.urls', 'posts'), namespace='posts')),
     # path('', include(('visits.urls', 'visits'), namespace='visits')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

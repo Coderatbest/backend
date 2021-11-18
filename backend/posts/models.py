@@ -7,6 +7,10 @@ class PostsModels(defaultModels):
     """
     Docs.
     """
+
+    title=models.TextField(
+        max_length=26,
+    )
     content=models.TextField(
         max_length=70,
     )
