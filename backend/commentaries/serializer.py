@@ -8,7 +8,10 @@ class CommentariesModelsSerializers(serializers.ModelSerializer):
         model = CommentariesModels
         fields = (
             'id',
+            'body',
+            'answers_to',
             'user_created',
             'date_created',
-            'body',
+            'user_modified',
+            'date_modified',
         )
