@@ -10,4 +10,4 @@ RUN pip install -r requirements.txt
 
 COPY --chown=django:django . .
 RUN chmod a+x start.sh
-CMD [ "./start.sh" ]
+CMD [ "entripoint.sh" ]
