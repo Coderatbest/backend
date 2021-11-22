@@ -3,7 +3,7 @@ services:
   api:
     image: ghcr.io/coderatbest/backend:latest
     environment:
-      DEPLOYED: ${DEPLOYED}
+      DEPLOYED: True
       ALLOWED_HOSTS: ${ALLOWED_HOSTS}
       ADMIN_URL: ${ADMIN_URL}
       DATABASE_URL: ${DB_URL}
