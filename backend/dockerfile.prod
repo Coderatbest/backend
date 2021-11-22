@@ -6,7 +6,9 @@ WORKDIR /home/django/app/
 
 RUN python -m pip install --upgrade pip
 COPY --chown=django:django requirements.txt .
+COPY --chown=django:django requirements.prod.txt .
 RUN pip install -r requirements.txt
+RUN pip install -r requirements.prod.txt
 
 COPY --chown=django:django . .
 RUN chmod a+x start.sh
