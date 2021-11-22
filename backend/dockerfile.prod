@@ -1,15 +1,20 @@
 FROM python:3.9.5
 
 RUN useradd -ms /bin/bash django
-USER django
-WORKDIR /home/django/app/
 
-RUN python -m pip install --upgrade pip
-COPY --chown=django:django requirements.txt .
-COPY --chown=django:django requirements.prod.txt .
+ENV PYTHONUNBUFFERED=1
+ENV PYTHONDONTWRITEBYTECODE 1
+
+USER root
+WORKDIR /root/app/
+
+RUN python -m pip install Pillow
+
+COPY requirements.txt .
+COPY requirements.prod.txt .
 RUN pip install -r requirements.txt
 RUN pip install -r requirements.prod.txt
 
-COPY --chown=django:django . .
+COPY . .
 RUN chmod a+x entripoint.sh
-CMD [ "entripoint.sh" ]
+CMD [ "./entripoint.sh","USER=root"  ]

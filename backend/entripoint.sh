@@ -1,9 +1,9 @@
 #!/bin/sh
 
-set -o errexit
-# set -o pipefail
-set -o nounset
+# set -o errexit
+# #set -o pipefail
+# set -o nounset
 
 
-python /app/manage.py collectstatic --noinput
-/usr/local/bin/gunicorn config.wsgi --bind 0.0.0.0:5000 --chdir=/app
+python manage.py collectstatic --noinput
+/usr/local/bin/gunicorn backend.wsgi --bind 0.0.0.0:8000 --chdir=$PWD
