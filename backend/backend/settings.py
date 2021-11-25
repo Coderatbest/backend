@@ -25,6 +25,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-dc4t95$q3v99glye(%nh*c+a9fw_iqgucjhk$1e46cr2g4avjj'
 
 ADMIN_URL=env('ADMIN_URL')
+
+print(f"http://localhost:8000/{ADMIN_URL}/")
 # SECURITY WARNING: don't run with debug turned on in production!
 
 DEBUG = env.bool('DEBUG ', default=True)

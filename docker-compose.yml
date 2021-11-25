@@ -9,7 +9,7 @@ services:
     volumes:
       - ./backend:/home/django/app/
     environment:
-      ADMIN_URL: admin
+      ADMIN_URL: admin/
       DATABASE_URL: ${DB_URL}
     depends_on:
       - db
