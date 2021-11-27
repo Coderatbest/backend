@@ -3,7 +3,6 @@ from django.conf import settings
 from django.contrib.auth import password_validation, authenticate
 from django.core.mail import EmailMultiAlternatives
 from django.core.validators import RegexValidator
-from django.db.models.fields import CharField
 from django.template.loader import render_to_string
 from django.utils import timezone
 
@@ -18,8 +17,8 @@ from .profileserializer import ProfileSerializer
 # Models
 from users.models import User,Profile
 
-#tasks
-from users.tasks import add
+# #tasks
+# from users.tasks import add
 
 # Utilities
 import jwt
@@ -38,7 +37,6 @@ class UsersLoginSerializer(serializers.Serializer):
     password = serializers.CharField(min_length=8,max_length=60)
 
     def validate(self, data):
-        add.delay(5,6)
         user= authenticate(username=data['email'],password=data['password'])
         if not user:
             raise serializers.ValidationError('credentials invalid')

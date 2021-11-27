@@ -18,5 +18,6 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: ${db_pass}
       MYSQL_DATABASE: coderatbest
+  
 volumes:
   logvolume01: {}
