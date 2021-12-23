@@ -14,8 +14,8 @@ services:
       MAIL_USER: ${MAIL_USER}
       MAIL_PASS: ${MAIL_PASS}
     volumes:
-      - static_volume:/home/app/web/static
-      - media_volume:/home/app/web/mediafiles 
+      - static_volume:/root/app/mediafiles
+      # - media_volume:/root/app/mediafiles 
   proxi:
     image: nginx:1.21.4-alpine
     ports:
