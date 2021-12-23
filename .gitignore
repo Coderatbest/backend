@@ -1,5 +1,4 @@
 /venv
 .env
-backend/mediafiles
 /data
 __pycache__/
