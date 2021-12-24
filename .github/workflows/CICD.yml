@@ -64,7 +64,7 @@ jobs:
             echo "StrictHostKeyChecking no">> ~/.ssh/config
             echo -e "    Host server\n    HostName $SERVER\n    User $USER">> ~/.ssh/config
             cat ~/.ssh/config
-            echo -e "docker-compose pull\ndocker-compose up -d" > deploy.sh
+            echo -e "cd $DEPLOY_DIR\ndocker-compose pull\ndocker-compose up -d" > deploy.sh
             cat  deploy.sh
             echo -e $PRIVATE_KEY > ~/.ssh/PRIVATE_KEY
             chmod 700 ~/.ssh/PRIVATE_KEY
