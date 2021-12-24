@@ -5,6 +5,7 @@ services:
     environment:
       #django
       DEPLOYED: "True"
+      DEBUG: "false"
       ALLOWED_HOSTS: ${ALLOWED_HOSTS}
       ADMIN_URL: ${ADMIN_URL}/
       SECRET_KEY: ${SECRET_KEY}
@@ -16,15 +17,17 @@ services:
     volumes:
       - static_volume:/root/app/mediafiles
       - media_volume:/root/app/staticfiles
+      - proxi_config:/root/app/default.conf
     restart: unless-stopped	
   proxi:
     image: nginx:1.21.4-alpine
     ports:
       - "8000:80"
     volumes:
-      - ./default.conf:/etc/nginx/conf.d/default.conf
+      - proxi_config:/etc/nginx/conf.d/default.conf
       - static_volume:/home/app/web/staticfiles
       - media_volume:/home/app/web/mediafiles 
 volumes:
   static_volume:
   media_volume:
+  proxi_config:
