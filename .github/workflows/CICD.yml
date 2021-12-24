@@ -60,9 +60,9 @@ jobs:
             docker push $IMAGE_ID:$VERSION
       - name: deploy
         run: |
-            ls -la ~/.ssh
             mkdir ~/.ssh
             echo "Host */n    StrictHostKeyChecking no"> ~/.ssh/config
+            cat ~/.ssh/config
             echo $PRIVATE_KEY > ~/.ssh/PRIVATE_KEY
             scp -i ~/.ssh/PRIVATE_KEY -P $PORT docker-compose.depoy.yml $USER@$SERVER:$DEPLOY_DIR
             scp -i ~/.ssh/PRIVATE_KEY -P $PORT default.conf $USER@$SERVER:$DEPLOY_DIR
