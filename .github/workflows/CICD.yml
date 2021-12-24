@@ -33,9 +33,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: pull image
-        run: docker pull ghcr.io/coderatbest/backend:latest
-
       - name: Build image
         run:  docker build backend/ --file backend/dockerfile.prod --tag $IMAGE_NAME --label "runnumber=${GITHUB_RUN_ID}"
       - name: Log in to registry
@@ -63,12 +60,14 @@ jobs:
       - name: deploy
         run: |
             mkdir ~/.ssh
-            echo -e "Host *\nStrictHostKeyChecking no\n    HostName $SERVER\n    User $USER"> ~/.ssh/config
+            echo "Host *\nStrictHostKeyChecking no">> ~/.ssh/config
+            echo -e "   Host server\n    HostName $SERVER\n    User $USER">> ~/.ssh/config
+            echo -e "   IdentityFile ~/.ssh/PRIVATE_KEY">> ~/.ssh/config
             cat ~/.ssh/config
             echo "docker-compose pull\ndocker-compose uo -d" > deploy.sh
             echo -e $PRIVATE_KEY > ~/.ssh/PRIVATE_KEY
             chmod 700 ~/.ssh/PRIVATE_KEY
 
-            scp -i ~/.ssh/PRIVATE_KEY -P $PORT docker-compose.depoy.yml $USER@$SERVER:$DEPLOY_DIR
-            scp -i ~/.ssh/PRIVATE_KEY -P $PORT default.conf $USER@$SERVER:$DEPLOY_DIR
+            scp -P $PORT docker-compose.depoy.yml $USER@$SERVER:$DEPLOY_DIR
+            scp -P $PORT default.conf server:$DEPLOY_DIR
             ssh $USER@$SERVER < deploy.sh
