@@ -2,6 +2,9 @@ from backend.base import *
 
 ALLOWED_HOSTS = str(env('ALLOWED_HOSTS')).split(',')
 
+for host in ALLOWED_HOSTS:
+    print(f'http://{host}/{ADMIN_URL}')
+
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY=env('SECRET_KEY')
 
