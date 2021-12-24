@@ -5,7 +5,7 @@ services:
     environment:
       #django
       DEPLOYED: "True"
-      DEBUG: "false"
+      DEBUG: "False"
       ALLOWED_HOSTS: ${ALLOWED_HOSTS}
       ADMIN_URL: ${ADMIN_URL}/
       SECRET_KEY: ${SECRET_KEY}
