@@ -63,7 +63,6 @@ jobs:
             echo "Host *">> ~/.ssh/config
             echo "StrictHostKeyChecking no">> ~/.ssh/config
             echo -e "    Host server\n    HostName $SERVER\n    User $USER">> ~/.ssh/config
-            echo -e "    IdentityFile ~/.ssh/PRIVATE_KEY">> ~/.ssh/config
             cat ~/.ssh/config
             echo -e "docker-compose pull\ndocker-compose uo -d" > deploy.sh
             cat  deploy.sh
@@ -71,6 +70,6 @@ jobs:
             chmod 700 ~/.ssh/PRIVATE_KEY
             ls -la ~/.ssh/PRIVATE_KEY
 
-            scp -P $PORT docker-compose.depoy.yml $USER@$SERVER:$DEPLOY_DIR
-            scp -P $PORT default.conf server:$DEPLOY_DIR
-            ssh $USER@$SERVER < deploy.sh
+            scp -i ~/.ssh/PRIVATE_KEY -P $PORT docker-compose.depoy.yml server:$DEPLOY_DIR
+            scp -i ~/.ssh/PRIVATE_KEY -P $PORT default.conf server:$DEPLOY_DIR
+            ssh -i ~/.ssh/PRIVATE_KEY server < deploy.sh
