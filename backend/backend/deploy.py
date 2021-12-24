@@ -7,10 +7,10 @@ SECRET_KEY=env('SECRET_KEY')
 
 WSGI_APPLICATION = 'backend.asgi.application'
 # anymail
-INSTALLED_APPS = +[
-    # ...
-    # ...
-]
+# INSTALLED_APPS = +[
+#     # ...
+#     # ...
+# ]
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True

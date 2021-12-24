@@ -11,6 +11,12 @@ on:
       - v*
 
 env:
+  SERVER: ${{ secrets.SERVER }}
+  PORT: ${{ secrets.PORT }}
+  USER: ${{ secrets.USER }}
+  PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+  DEPLOY_DIR: ${{ secrets.DEPLOY_DIR }}
+
   IMAGE_NAME: backend
 
   WEBHOOK_ID: ${{ secrets.WEBHOOK_ID }}
@@ -52,3 +58,11 @@ jobs:
             echo VERSION=$VERSION
             docker tag $IMAGE_NAME $IMAGE_ID:$VERSION
             docker push $IMAGE_ID:$VERSION
+      - name: deploy
+        run: |
+            mkdir ~/.ssh
+            echo $PRIVATE_KEY > ~/.ssh/PRIVATE_KEY
+            scp -i ~/.ssh/PRIVATE_KEY -P $PORT docker-compose.depoy.yml $USER@$SERVER:$DEPLOY_DIR
+            scp -i ~/.ssh/PRIVATE_KEY -P $PORT default.conf $USER@$SERVER:$DEPLOY_DIR
+            echo "docker-compose pull\ndocker-compose uo -d" > deploy.sh
+            ssh -o "StrictHostKeyChecking no" $USER@$SERVER < deploy.sh

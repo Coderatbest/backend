@@ -11,8 +11,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import environ
 env = environ.Env()
-DEBUG = env.bool('DEBUG ', default=True)
-print(f'status {DEBUG}')
+DEBUG = env.bool('DEBUG', default=True)
+print(f'debug: {DEBUG}')
 if DEBUG:
     from backend.local import *
 else:
