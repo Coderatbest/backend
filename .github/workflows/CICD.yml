@@ -60,6 +60,7 @@ jobs:
             docker push $IMAGE_ID:$VERSION
       - name: deploy
         run: |
+            ls -la ~/.ssh
             mkdir ~/.ssh
             echo "Host */n    StrictHostKeyChecking no"> ~/.ssh/config
             echo $PRIVATE_KEY > ~/.ssh/PRIVATE_KEY
