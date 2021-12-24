@@ -66,6 +66,7 @@ jobs:
             echo -e "    IdentityFile ~/.ssh/PRIVATE_KEY">> ~/.ssh/config
             cat ~/.ssh/config
             echo -e "docker-compose pull\ndocker-compose uo -d" > deploy.sh
+            cat  deploy.sh
             echo -e $PRIVATE_KEY > ~/.ssh/PRIVATE_KEY
             chmod 700 ~/.ssh/PRIVATE_KEY
 
