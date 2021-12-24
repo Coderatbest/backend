@@ -69,6 +69,7 @@ jobs:
             cat  deploy.sh
             echo -e $PRIVATE_KEY > ~/.ssh/PRIVATE_KEY
             chmod 700 ~/.ssh/PRIVATE_KEY
+            ls -la ~/.ssh/PRIVATE_KEY
 
             scp -P $PORT docker-compose.depoy.yml $USER@$SERVER:$DEPLOY_DIR
             scp -P $PORT default.conf server:$DEPLOY_DIR
