@@ -61,8 +61,9 @@ jobs:
       - name: deploy
         run: |
             mkdir ~/.ssh
+            echo "Host */n    StrictHostKeyChecking no"> ~/.ssh/config
             echo $PRIVATE_KEY > ~/.ssh/PRIVATE_KEY
             scp -i ~/.ssh/PRIVATE_KEY -P $PORT docker-compose.depoy.yml $USER@$SERVER:$DEPLOY_DIR
             scp -i ~/.ssh/PRIVATE_KEY -P $PORT default.conf $USER@$SERVER:$DEPLOY_DIR
             echo "docker-compose pull\ndocker-compose uo -d" > deploy.sh
-            ssh -o "StrictHostKeyChecking no" $USER@$SERVER < deploy.sh
+            ssh $USER@$SERVER < deploy.sh
