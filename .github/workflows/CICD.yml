@@ -70,6 +70,6 @@ jobs:
             chmod 700 ~/.ssh/PRIVATE_KEY
             ls -la ~/.ssh/PRIVATE_KEY
 
-            scp -i ~/.ssh/PRIVATE_KEY -P $PORT docker-compose.depoy.yml server:$DEPLOY_DIR
+            scp -i ~/.ssh/PRIVATE_KEY -P $PORT docker-compose.depoy.yml server:$DEPLOY_DIR/docker-compose.yml
             scp -i ~/.ssh/PRIVATE_KEY -P $PORT default.conf server:$DEPLOY_DIR
             ssh -i ~/.ssh/PRIVATE_KEY server < deploy.sh
