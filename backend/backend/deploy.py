@@ -23,7 +23,7 @@ EMAIL_HOST_PASSWORD = env('MAIL_PASS')
 EMAIL_PORT = 587
 
 CORS_ALLOW_ALL_ORIGINS = False
-CORS_ORIGIN_WHITELIST = env('CORS_ORIGIN_WHITELIST', '').split(',')
+CORS_ORIGIN_WHITELIST = (env('CORS_ORIGIN_WHITELIST') or '').split(',')
 CORS_ALLOW_HEADERS = list(default_headers) + [
 'x-retried-from',
 'access-control-allow-origin'
