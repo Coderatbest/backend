@@ -71,4 +71,7 @@ jobs:
             ls -la ~/.ssh/PRIVATE_KEY
 
             scp -i ~/.ssh/PRIVATE_KEY -P $PORT docker-compose.depoy.yml server:$DEPLOY_DIR/docker-compose.yml
+
+            rsync -i ~/.ssh/PRIVATE_KEY --partial --progress --rsh=ssh proxy server:$DEPLOY_DIR
+            
             ssh -i ~/.ssh/PRIVATE_KEY server < deploy.sh
