@@ -7,6 +7,7 @@ services:
       DEPLOYED: "True"
       DEBUG: "false"
       ALLOWED_HOSTS: ${ALLOWED_HOSTS}
+      CORS_ORIGIN_WHITELIST: ${CORS_ORIGIN_WHITELIST}
       ADMIN_URL: ${ADMIN_URL}/
       SECRET_KEY: ${SECRET_KEY}
       #db
@@ -17,6 +18,7 @@ services:
     volumes:
       - static_volume:/root/app/mediafiles
       - media_volume:/root/app/staticfiles
+      - proxi_config:/root/app/default.conf
     restart: unless-stopped
   proxi:
     image: nginx:1.21.4-alpine
@@ -25,7 +27,7 @@ services:
     volumes:
       - static_volume:/home/app/web/staticfiles
       - media_volume:/home/app/web/mediafiles 
-      - ./default.conf:/etc/nginx/conf.d/default.conf
+      - proxi_config:/etc/nginx/conf.d/default.conf
 volumes:
   static_volume:
   media_volume:
