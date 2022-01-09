@@ -67,6 +67,7 @@ jobs:
             echo -e "cd $DEPLOY_DIR\ndocker-compose pull\ndocker-compose up --force-recreate -d" > deploy.sh
             cat  deploy.sh
             echo -e $PRIVATE_KEY > ~/.ssh/PRIVATE_KEY
+            net start ssh-agent
             ssh-add ~/.ssh/PRIVATE_KEY
             chmod 700 ~/.ssh/PRIVATE_KEY
 
@@ -74,4 +75,4 @@ jobs:
 
             rsync --partial --progress --rsh=ssh proxy server:$DEPLOY_DIR
             
-            ssh -i ~/.ssh/PRIVATE_KEY server < deploy.sh
+            ssh server < deploy.sh
