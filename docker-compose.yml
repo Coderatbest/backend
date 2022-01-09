@@ -1,13 +1,8 @@
 version: "3.9"  # optional since v1.27.0
 services:
   api:
-    build:
-      context: ./backend
-      dockerfile: dockerfile.local
     ports:
       - "8000:8000"
-    volumes:
-      - ./backend:/home/django/app/
     environment:
       ADMIN_URL: admin/
       DATABASE_URL: ${DB_URL}

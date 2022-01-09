@@ -1,0 +1,11 @@
+
+version: "3.9"  # optional since v1.27.0
+services:
+  api:
+    build:
+      context: ./backend
+      dockerfile: dockerfile.prod
+    volumes:
+      - ./backend:/root/app/
+      - ./backend:/home/django/app/
+    
