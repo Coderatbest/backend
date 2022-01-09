@@ -69,10 +69,9 @@ jobs:
             echo -e $PRIVATE_KEY > ~/.ssh/PRIVATE_KEY
             ssh-add ~/.ssh/PRIVATE_KEY
             chmod 700 ~/.ssh/PRIVATE_KEY
-            ls -la ~/.ssh/PRIVATE_KEY
 
             scp -P $PORT docker-compose.depoy.yml server:$DEPLOY_DIR/docker-compose.yml
 
             rsync --partial --progress --rsh=ssh proxy server:$DEPLOY_DIR
             
-            ssh server < deploy.sh
+            ssh -i ~/.ssh/PRIVATE_KEY server < deploy.sh
