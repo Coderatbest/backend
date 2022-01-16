@@ -22,7 +22,6 @@ class CommentariesViewSets(viewsets.ModelViewSet):
     def get_permissions(self):
         """Assign permissions based on action."""
         permissions = [AllowAny]
-        print(self.action)
         if self.action in ['create','update', 'partial_update','destroy']:
             permissions.append(IsAuthenticated)
         return [permission() for permission in permissions]
