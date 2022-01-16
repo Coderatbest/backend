@@ -17,13 +17,12 @@ class CommentariesViewSets(viewsets.ModelViewSet):
     parser_classes = (MultiPartParser,FormParser,JSONParser)
     queryset = CommentariesModels.objects.filter(is_activate=True)
     serializer_class = CommentariesModelsSerializers
-    # permission_classes = (IsAuthenticated)
     lookup_field = 'id'
 
     def get_permissions(self):
         """Assign permissions based on action."""
         permissions = [AllowAny]
         print(self.action)
-        if self.action in ['create','update', 'partial_update']:
+        if self.action in ['create','update', 'partial_update','destroy']:
             permissions.append(IsAuthenticated)
         return [permission() for permission in permissions]
