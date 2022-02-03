@@ -9,4 +9,8 @@ class Profile(models.Model):
         blank=True,
         null=True
     )
-    biography = models.TextField(max_length=500, blank=True)
+    age = models.PositiveIntegerField(
+        null=True
+    )
+    
+    biography = models.TextField(max_length=2000, blank=True)

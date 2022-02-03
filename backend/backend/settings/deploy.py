@@ -1,4 +1,5 @@
-from backend.base import *
+from .base import *
+DEBUG = False
 
 ALLOWED_HOSTS = str(env('ALLOWED_HOSTS')).split(',')
 
@@ -9,11 +10,22 @@ for host in ALLOWED_HOSTS:
 SECRET_KEY=env('SECRET_KEY')
 
 WSGI_APPLICATION = 'backend.asgi.application'
-# anymail
-# INSTALLED_APPS = +[
-#     # ...
-#     # ...
-# ]
+INSTALLED_APPS += [
+    #cloudinary
+    'cloudinary_storage',
+    'django.contrib.staticfiles',
+    'cloudinary',
+    # ...
+    # ...
+]
+#cloudinary
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': env('CLOUD_NAME'),
+    'API_KEY': env('API_KEY'),
+    'API_SECRET': env('API_KEY')
+}
+MEDIA_URL = '/media/'  # or any prefix you choose
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True

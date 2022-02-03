@@ -1,2 +1,6 @@
 gunicorn==20.1.0
 uvicorn==0.16.0
+#cloudinary
+cloudinary==1.28.1
+django-cloudinary-storage==0.3.0
+Pillow==9.0.0

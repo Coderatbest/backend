@@ -19,7 +19,7 @@ class ProfileAdmin(admin.ModelAdmin):
     """
     docs.
     """
-    list_display=('user','image','biography')
+    list_display=('user','age')
     
     ordering=['id']
 

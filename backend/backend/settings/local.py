@@ -1,9 +1,17 @@
-from backend.base import *
+from .base import *
 
+
+DEBUG=True
 print(f"http://localhost:8000/{ADMIN_URL}")
 
 ALLOWED_HOSTS = []
 
+INSTALLED_APPS +=[
+    #cloudinary
+    'django.contrib.staticfiles',
+    # ...
+    # ...
+]
 
 WSGI_APPLICATION = 'backend.wsgi.application'
 # SECURITY WARNING: keep the secret key used in production secret!
