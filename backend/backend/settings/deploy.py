@@ -12,8 +12,8 @@ SECRET_KEY=env('SECRET_KEY')
 WSGI_APPLICATION = 'backend.asgi.application'
 INSTALLED_APPS += [
     #cloudinary
-    'cloudinary_storage',
     'django.contrib.staticfiles',
+    'cloudinary_storage',
     'cloudinary',
     # ...
     # ...
@@ -22,10 +22,13 @@ INSTALLED_APPS += [
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': env('CLOUD_NAME'),
     'API_KEY': env('API_KEY'),
-    'API_SECRET': env('API_KEY')
+    'API_SECRET': env('API_KEY'),
+    'STATICFILES_MANIFEST_ROOT': os.path.join(BASE_DIR, 'my-manifest-directory')
 }
 MEDIA_URL = '/media/'  # or any prefix you choose
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+# STATIC_URL = '/static/'
+# STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
@@ -40,3 +43,9 @@ CORS_ALLOW_HEADERS = list(default_headers) + [
 'x-retried-from',
 'access-control-allow-origin'
 ]
+
+
+CLOUDINARY_STORAGE = {
+    # other settings, like credentials
+    'STATICFILES_MANIFEST_ROOT': os.path.join(BASE_DIR, 'my-manifest-directory')
+}
