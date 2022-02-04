@@ -1,7 +1,5 @@
 #django
 from django.db import models
-#models
-from users.models.images import ImagesProfile
 
 class Profile(models.Model):
     """docs."""
@@ -17,10 +15,3 @@ class Profile(models.Model):
     )
     # imgs =  
     biography = models.TextField(max_length=2000, blank=True)
-
-    imgs_extra = models.ForeignKey(
-        to=ImagesProfile,
-        on_delete=models.CASCADE,
-        null=True,
-        blank=True
-    )

@@ -52,5 +52,5 @@ class ProfileViewSet(
     mixins.RetrieveModelMixin,
 ):
     queryset = User.objects.filter(is_activate=True)
-    serializer_class = ProfileSerializer
+    serializer_class = UsersSerializer
     lookup_field = 'username'
