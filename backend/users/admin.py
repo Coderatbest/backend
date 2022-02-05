@@ -3,7 +3,7 @@ from django.contrib.admin.decorators import register
 
 from django.contrib.auth.admin import UserAdmin
 
-from users.models import User,Profile,ImagesProfile
+from users.models import User,Profile,ImagesProfile,TimeLineProfile
 from commentaries.models import CommentariesModels
 from posts.models import PostsModels
 from visits.models import VisitsModels
@@ -11,6 +11,8 @@ from visits.models import VisitsModels
 
 class ImagesProfileInline(admin.TabularInline):
     model = ImagesProfile
+class TimeLineInline(admin.TabularInline):
+    model = TimeLineProfile
 class customUserAdmin(UserAdmin):
     """
     docs.
@@ -27,6 +29,7 @@ class ProfileAdmin(admin.ModelAdmin):
     list_display=('user','age')
     inlines = [
         ImagesProfileInline,
+        TimeLineInline,
     ]
     ordering=['id']
 

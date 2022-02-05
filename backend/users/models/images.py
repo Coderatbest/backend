@@ -12,8 +12,11 @@ class ImagesProfile(models.Model):
     )  
 
     profile = models.ForeignKey(
+        related_name='images_profile',
         to=Profile,
         on_delete=models.CASCADE,
         null=True,
         blank=True
     )
+    def __str__(self) -> str:
+        return self.image.url
