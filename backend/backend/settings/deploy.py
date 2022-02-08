@@ -27,8 +27,8 @@ CLOUDINARY_STORAGE = {
 }
 MEDIA_URL = '/media/'  # or any prefix you choose
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-STATIC_URL = '/staticfiles/'
-STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+STATIC_URL  =  '/static/' 
+STATICFILES_STORAGE  =  'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
