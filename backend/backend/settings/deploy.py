@@ -12,8 +12,8 @@ SECRET_KEY=env('SECRET_KEY')
 WSGI_APPLICATION = 'backend.asgi.application'
 INSTALLED_APPS += [
     #cloudinary
-    'django.contrib.staticfiles',
     'cloudinary_storage',
+    'django.contrib.staticfiles',
     'cloudinary',
     # ...
     # ...
