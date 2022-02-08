@@ -20,9 +20,9 @@ services:
       API_SECRET: ${API_SECRET}
       CLOUD_NAME: ${CLOUD_NAME}
       CLOUDINARY_URL: cloudinary://${API_KEY}:${API_SECRET}@${CLOUD_NAME}
-    # volumes:
-    #   - static_volume:/root/app/mediafiles
-    #   - media_volume:/root/app/staticfiles
+    volumes:
+      - ./mediafiles:/root/app/mediafiles
+      - ./staticfiles:/root/app/staticfiles
     restart: unless-stopped
     ports:
       - "8000:8000"
