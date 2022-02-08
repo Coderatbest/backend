@@ -12,8 +12,6 @@ INSTALLED_APPS +=[
     # ...
     # ...
 ]
-STATIC_URL = '/staticfiles/'
-STATIC_ROOT= 'staticfiles'
 
 WSGI_APPLICATION = 'backend.wsgi.application'
 # SECURITY WARNING: keep the secret key used in production secret!

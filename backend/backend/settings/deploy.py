@@ -12,8 +12,8 @@ SECRET_KEY=env('SECRET_KEY')
 WSGI_APPLICATION = 'backend.asgi.application'
 INSTALLED_APPS += [
     #cloudinary
-    'cloudinary_storage',
     'django.contrib.staticfiles',
+    'cloudinary_storage',
     'cloudinary',
     # ...
     # ...
@@ -27,8 +27,9 @@ CLOUDINARY_STORAGE = {
 }
 MEDIA_URL = '/media/'  # or any prefix you choose
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-STATIC_URL  =  '/static/' 
-STATICFILES_STORAGE  =  'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+
+# STATIC_URL  =  '/static/' 
+# STATICFILES_STORAGE  =  'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
