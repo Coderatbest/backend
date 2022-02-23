@@ -43,16 +43,12 @@ EMAIL_HOST_USER = env('MAIL_USER')
 EMAIL_HOST_PASSWORD = env('MAIL_PASS')
 EMAIL_PORT = 587
 
-CORS_ALLOW_ALL_ORIGINS = False
+CORS_ALLOW_ALL_ORIGINS = True
 CORS_ORIGIN_WHITELIST = (env('CORS_ORIGIN_WHITELIST') or '').split(',')
 CORS_ALLOW_HEADERS = list(default_headers) + [
 'x-retried-from',
 'access-control-allow-origin'
 ]
-CORS_ALLOWED_ORIGIN_REGEXES = [
-    r"^https?://.*\.?coderatbest\.com$",
-]
-
 
 CLOUDINARY_STORAGE = {
     # other settings, like credentials
