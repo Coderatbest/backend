@@ -17,6 +17,11 @@ INSTALLED_APPS += [
     'cloudinary',
     # ...
     # ...
+    'corsheaders',
+]
+MIDDLEWARE +=[
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 #cloudinary
 CLOUDINARY_STORAGE = {
