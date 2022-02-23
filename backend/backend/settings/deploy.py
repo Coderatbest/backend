@@ -50,7 +50,7 @@ CORS_ALLOW_HEADERS = list(default_headers) + [
 'access-control-allow-origin'
 ]
 CORS_ALLOWED_ORIGIN_REGEXES = [
-    r"^https?://.*\.coderatbest\.com$",
+    r"^https?://.*\.?coderatbest\.com$",
 ]
 
 
