@@ -43,13 +43,15 @@ EMAIL_HOST_USER = env('MAIL_USER')
 EMAIL_HOST_PASSWORD = env('MAIL_PASS')
 EMAIL_PORT = 587
 
-CORS_ALLOW_ALL_ORIGINS = True
-CORS_ORIGIN_WHITELIST = (env('CORS_ORIGIN_WHITELIST') or '').split(',')
-CORS_ALLOW_HEADERS = list(default_headers) + [
-'x-retried-from',
-'access-control-allow-origin'
+CORS_ALLOW_ALL_ORIGINS = True # If this is used then `CORS_ALLOWED_ORIGINS` will not have any effect
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3030',
+] # If this is used, then not need to use `CORS_ALLOW_ALL_ORIGINS = True`
+CORS_ALLOWED_ORIGIN_REGEXES = [
+    'http://localhost:3030',
 ]
-
+print()
 CLOUDINARY_STORAGE = {
     # other settings, like credentials
     'STATICFILES_MANIFEST_ROOT': os.path.join(BASE_DIR, 'my-manifest-directory')
