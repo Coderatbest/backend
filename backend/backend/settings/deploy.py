@@ -49,6 +49,9 @@ CORS_ALLOW_HEADERS = list(default_headers) + [
 'x-retried-from',
 'access-control-allow-origin'
 ]
+CORS_ALLOWED_ORIGIN_REGEXES = [
+    r"^https?://.*\.coderatbest\.com$",
+]
 
 
 CLOUDINARY_STORAGE = {
