@@ -28,14 +28,15 @@ services:
       - extensions_authentication_admin_username=admin
       - extensions_authentication_admin_password=password
       - extensions_authentication_cookieSession_secret=yyylong
-      # - httpPort=3000
     ports:
-      - 5488:5488
       - 3001:3000
     depends_on:
       - db
-    entrypoint: jsreport
-    command: start --httpPort=3000
-    # command: init
+  report-service:
+    image: report-service
+    ports:
+      - 5832:3000
+    depends_on:
+      - jsreport
 volumes:
   database: {}

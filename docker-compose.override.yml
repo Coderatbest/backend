@@ -10,9 +10,15 @@ services:
       - ./backend:/home/django/app/
   jsreport:
     build: 
-      context: reports
+      context: jsreport
       dockerfile: dockerfile
     volumes:
-      - ./reports/data:/app/data
+      - ./jsreport/data:/app/data
       # - ./reports/app/:/app/
+  report-service:
+    build:
+      context: ReportService
+      dockerfile: dockerfile
+    volumes:
+      - ./ReportService/src/:/app/src/
     

@@ -1,0 +1,11 @@
+FROM node:16.13-alpine
+WORKDIR /app/
+RUN npm install -g nodemon
+COPY ./package.json .
+RUN npm install
+EXPOSE 3000
+COPY ./src ./src
+# RUN npm run build
+ENTRYPOINT [ "nodemon" ]
+CMD [ "/app/src/main.js" ]
+# CMD [ "tail","-f","/dev/null" ]
