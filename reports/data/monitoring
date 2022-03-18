@@ -1,2 +1,4 @@
 {"cpu":8,"freemem":352,"timestamp":{"$$date":1647574675161},"hostname":"3aa21c36f19a","creationDate":{"$$date":1647574675175},"modificationDate":{"$$date":1647574675175},"shortid":"CpcsO9e","_id":"TcYLz9kwpFEtXpAG","$entitySet":"monitoring"}
 {"cpu":17,"freemem":193,"timestamp":{"$$date":1647574735165},"hostname":"3aa21c36f19a","creationDate":{"$$date":1647574735165},"modificationDate":{"$$date":1647574735165},"shortid":"3bicPJL","_id":"SAzpeHNIHDrAqNnL","$entitySet":"monitoring"}
+{"cpu":8,"freemem":179,"timestamp":{"$$date":1647574795161},"hostname":"3aa21c36f19a","creationDate":{"$$date":1647574795162},"modificationDate":{"$$date":1647574795162},"shortid":"JZArf2n","_id":"EJ72KwyIM7miG19m","$entitySet":"monitoring"}
+{"cpu":5,"freemem":225,"timestamp":{"$$date":1647574855161},"hostname":"3aa21c36f19a","creationDate":{"$$date":1647574855161},"modificationDate":{"$$date":1647574855161},"shortid":"tzE5266","_id":"vNxpW2VqQl1xMvaa","$entitySet":"monitoring"}
