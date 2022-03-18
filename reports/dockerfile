@@ -1,8 +1,9 @@
 FROM jsreport/jsreport:3.4.1
 WORKDIR /app
 # RUN npm i handlebars-intl --save
-COPY --chown=jsreport:jsreport /app/ /app/
+COPY --chown=jsreport:jsreport ["/app/package.json","jsreport.config.json", .]
 RUN npm install
+RUN jsreport init
 ENV httpPort=3000
 EXPOSE 5488
 ENTRYPOINT [ "jsreport" ]
