@@ -8,7 +8,7 @@ app.get('/:username/', function (req, res) {
             "name":"cv-template"
         },
         "data":{
-            "username":"alex"
+            "username":username
         }
     }
 options={
