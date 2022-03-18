@@ -1,0 +1,35 @@
+{
+  "httpPort": 5488,
+  "store": {
+    "provider": "memory"
+  },
+  "blobStorage": {
+    "provider": "memory"
+  },
+  "logger": {
+    "console": {
+      "transport": "console",
+      "level": "debug"
+    }
+  },
+  "allowLocalFilesAccess": true,
+  "reportTimeout": 60000,
+  "workers": {
+    "numberOfWorkers": 2
+  },
+  "extensions": {
+    "extensions": {
+      "fs-store": {
+        "dataDirectory": "/app/data"
+      }
+    },
+    "authentication": {
+      "cookieSession": {},
+      "admin": {
+        "username": "admin",
+        "password": "password"
+      },
+      "enabled": false
+    }
+  }
+}

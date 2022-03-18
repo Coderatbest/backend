@@ -4,7 +4,7 @@ from .base import *
 DEBUG=True
 print(f"http://localhost:8000/{ADMIN_URL}")
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS +=[
     #cloudinary

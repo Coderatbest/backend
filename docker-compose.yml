@@ -21,5 +21,21 @@ services:
     restart: always
     ports:
       - 8080:8080 
+  jsreport:
+    # image: jsreport/jsreport:3.4.1
+    image: jsreport
+    environment:
+      - extensions_authentication_admin_username=admin
+      - extensions_authentication_admin_password=password
+      - extensions_authentication_cookieSession_secret=yyylong
+      # - httpPort=3000
+    ports:
+      - 5488:5488
+      - 3001:3000
+    depends_on:
+      - db
+    entrypoint: jsreport
+    command: start --httpPort=3000
+    # command: init
 volumes:
   database: {}

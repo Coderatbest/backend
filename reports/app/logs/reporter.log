@@ -1,0 +1,175 @@
+2022-03-18T02:26:36.105Z - info: Initializing jsreport (version: 3.4.1, configuration file: jsreport.config.json, nodejs: 16.13.1)
+2022-03-18T02:26:36.110Z - info: Searching for available extensions in /app/
+2022-03-18T02:26:36.115Z - info: Extensions location cache not found, crawling directories
+2022-03-18T02:26:36.390Z - info: Found 35 extension(s)
+2022-03-18T02:26:36.430Z - debug: Writing extension locations cache to /tmp/jsreport/core/locations.json
+2022-03-18T02:26:36.433Z - debug: Discovered 35 extensions
+2022-03-18T02:26:36.550Z - debug: Extension authentication@3.2.0 is disabled, skipping
+2022-03-18T02:26:36.552Z - info: Using extension base@3.0.0
+2022-03-18T02:26:36.565Z - info: Using extension child-templates@3.0.1
+2022-03-18T02:26:36.570Z - info: Using extension cli@3.1.0
+2022-03-18T02:26:36.574Z - info: Using extension components@3.2.0
+2022-03-18T02:26:36.578Z - info: Using extension data@3.0.1
+2022-03-18T02:26:36.582Z - info: Using extension express@3.3.1
+2022-03-18T02:26:36.895Z - info: Using extension freeze@3.0.1
+2022-03-18T02:26:36.898Z - info: Using extension fs-store@3.1.0
+2022-03-18T02:26:36.993Z - debug: Extension fs-store@3.1.0 was disabled
+2022-03-18T02:26:36.994Z - info: Using extension handlebars@3.0.0
+2022-03-18T02:26:36.999Z - info: Using extension import-export@3.1.1
+2022-03-18T02:26:37.021Z - info: Using extension jsrender@3.0.0
+2022-03-18T02:26:37.023Z - info: Using extension licensing@3.0.2
+2022-03-18T02:26:37.057Z - info: Using extension localization@3.2.0
+2022-03-18T02:26:37.059Z - info: Using extension npm@3.1.1
+2022-03-18T02:26:37.066Z - info: Using extension pdf-utils@3.3.0
+2022-03-18T02:26:37.070Z - info: Using extension reports@3.0.3
+2022-03-18T02:26:37.075Z - info: Using extension tags@3.1.0
+2022-03-18T02:26:37.079Z - info: Using extension text@3.0.0
+2022-03-18T02:26:37.081Z - info: Using extension version-control@3.1.0
+2022-03-18T02:26:37.099Z - info: Using extension assets@3.3.0
+2022-03-18T02:26:37.115Z - info: Using extension authorization@3.2.0
+2022-03-18T02:26:37.121Z - debug: Extension authorization@3.2.0 was disabled
+2022-03-18T02:26:37.122Z - info: Using extension browser-client@3.1.0
+2022-03-18T02:26:37.126Z - info: Using extension chrome-pdf@3.1.0
+2022-03-18T02:26:37.156Z - debug: Chrome strategy is chrome-pool, numberOfWorkers: 1
+2022-03-18T02:26:37.158Z - debug: Chrome custom launch options are args=--no-sandbox,--disable-dev-shm-usage, executablePath=/usr/lib/chromium/chrome
+2022-03-18T02:26:37.159Z - info: Using extension docx@3.2.0
+2022-03-18T02:26:37.164Z - info: Using extension html-to-xlsx@3.2.0
+2022-03-18T02:26:37.243Z - info: html-to-xlsx detected chrome as available html engine
+2022-03-18T02:26:37.243Z - info: Using extension pptx@3.1.0
+2022-03-18T02:26:37.247Z - info: Using extension scheduling@3.0.1
+2022-03-18T02:26:37.305Z - info: Using extension scripts@3.2.0
+2022-03-18T02:26:37.307Z - info: Using extension static-pdf@3.0.0
+2022-03-18T02:26:37.308Z - info: Using extension studio@3.4.0
+2022-03-18T02:26:37.403Z - info: Using extension xlsx@3.1.0
+2022-03-18T02:26:37.431Z - info: Using extension public-templates@3.0.0
+2022-03-18T02:26:37.432Z - debug: Extension public-templates@3.0.0 was disabled
+2022-03-18T02:26:37.433Z - info: Using extension sample-template@3.1.0
+2022-03-18T02:26:37.437Z - info: Using extension studio-theme-dark@3.0.1
+2022-03-18T02:26:37.439Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2022-03-18T02:26:37.440Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2022-03-18T02:26:37.468Z - debug: studio default theme is: light
+2022-03-18T02:26:37.490Z - info: Creating default express app.
+2022-03-18T02:26:37.527Z - info: jsreport server successfully started on http port: 3000
+2022-03-18T02:26:37.530Z - info: Verifying license key free
+2022-03-18T02:26:37.531Z - info: Using free license
+2022-03-18T02:26:37.541Z - info: Migrating templates chrome settings (waitForNetworkIddle -> waitForNetworkIdle)
+2022-03-18T02:26:37.543Z - info: Migration successful
+2022-03-18T02:26:37.545Z - debug: Creating samples is disabled
+2022-03-18T02:26:37.548Z - info: Initializing worker threads
+2022-03-18T02:26:37.548Z - debug: Extensions in workers: base, child-templates, components, data, express, handlebars, jsrender, localization, npm, pdf-utils, reports, text, version-control, assets, browser-client, chrome-pdf, docx, html-to-xlsx, pptx, scripts, static-pdf, studio, xlsx
+2022-03-18T02:26:37.914Z - info: 2 worker threads initialized in 366ms
+2022-03-18T02:26:37.914Z - info: Starting temp files cleanup with 180000ms threshold
+2022-03-18T02:26:37.916Z - info: reporter initialized
+2022-03-18T02:27:33.587Z - info: Initializing jsreport (version: 3.4.1, configuration file: jsreport.config.json, nodejs: 16.13.1)
+2022-03-18T02:27:33.592Z - info: Searching for available extensions in /app/
+2022-03-18T02:27:33.598Z - info: Extensions location cache not found, crawling directories
+2022-03-18T02:27:34.129Z - info: Found 35 extension(s)
+2022-03-18T02:27:34.205Z - debug: Writing extension locations cache to /tmp/jsreport/core/locations.json
+2022-03-18T02:27:34.209Z - debug: Discovered 35 extensions
+2022-03-18T02:27:34.411Z - debug: Extension authentication@3.2.0 is disabled, skipping
+2022-03-18T02:27:34.414Z - info: Using extension base@3.0.0
+2022-03-18T02:27:34.431Z - info: Using extension child-templates@3.0.1
+2022-03-18T02:27:34.440Z - info: Using extension cli@3.1.0
+2022-03-18T02:27:34.445Z - info: Using extension components@3.2.0
+2022-03-18T02:27:34.448Z - info: Using extension data@3.0.1
+2022-03-18T02:27:34.452Z - info: Using extension express@3.3.1
+2022-03-18T02:27:34.825Z - info: Using extension freeze@3.0.1
+2022-03-18T02:27:34.829Z - info: Using extension fs-store@3.1.0
+2022-03-18T02:27:34.952Z - debug: Extension fs-store@3.1.0 was disabled
+2022-03-18T02:27:34.953Z - info: Using extension handlebars@3.0.0
+2022-03-18T02:27:34.956Z - info: Using extension import-export@3.1.1
+2022-03-18T02:27:34.979Z - info: Using extension jsrender@3.0.0
+2022-03-18T02:27:34.981Z - info: Using extension licensing@3.0.2
+2022-03-18T02:27:35.020Z - info: Using extension localization@3.2.0
+2022-03-18T02:27:35.022Z - info: Using extension npm@3.1.1
+2022-03-18T02:27:35.031Z - info: Using extension pdf-utils@3.3.0
+2022-03-18T02:27:35.036Z - info: Using extension reports@3.0.3
+2022-03-18T02:27:35.041Z - info: Using extension tags@3.1.0
+2022-03-18T02:27:35.046Z - info: Using extension text@3.0.0
+2022-03-18T02:27:35.047Z - info: Using extension version-control@3.1.0
+2022-03-18T02:27:35.068Z - info: Using extension assets@3.3.0
+2022-03-18T02:27:35.088Z - info: Using extension authorization@3.2.0
+2022-03-18T02:27:35.099Z - debug: Extension authorization@3.2.0 was disabled
+2022-03-18T02:27:35.100Z - info: Using extension browser-client@3.1.0
+2022-03-18T02:27:35.105Z - info: Using extension chrome-pdf@3.1.0
+2022-03-18T02:27:35.133Z - debug: Chrome strategy is chrome-pool, numberOfWorkers: 1
+2022-03-18T02:27:35.134Z - debug: Chrome custom launch options are executablePath=/usr/lib/chromium/chrome, args=--no-sandbox,--disable-dev-shm-usage
+2022-03-18T02:27:35.135Z - info: Using extension docx@3.2.0
+2022-03-18T02:27:35.140Z - info: Using extension html-to-xlsx@3.2.0
+2022-03-18T02:27:35.256Z - info: html-to-xlsx detected chrome as available html engine
+2022-03-18T02:27:35.257Z - info: Using extension pptx@3.1.0
+2022-03-18T02:27:35.270Z - info: Using extension scheduling@3.0.1
+2022-03-18T02:27:35.358Z - info: Using extension scripts@3.2.0
+2022-03-18T02:27:35.360Z - info: Using extension static-pdf@3.0.0
+2022-03-18T02:27:35.362Z - info: Using extension studio@3.4.0
+2022-03-18T02:27:35.475Z - info: Using extension xlsx@3.1.0
+2022-03-18T02:27:35.518Z - info: Using extension public-templates@3.0.0
+2022-03-18T02:27:35.520Z - debug: Extension public-templates@3.0.0 was disabled
+2022-03-18T02:27:35.521Z - info: Using extension sample-template@3.1.0
+2022-03-18T02:27:35.525Z - info: Using extension studio-theme-dark@3.0.1
+2022-03-18T02:27:35.530Z - info: Using general timeout for rendering (reportTimeout: 60000)
+2022-03-18T02:27:35.530Z - info: Using memory provider for template store. The saved templates will be lost after restart
+2022-03-18T02:27:35.569Z - debug: studio default theme is: light
+2022-03-18T02:27:35.602Z - info: Creating default express app.
+2022-03-18T02:27:35.655Z - info: jsreport server successfully started on http port: 3000
+2022-03-18T02:27:35.658Z - info: Verifying license key free
+2022-03-18T02:27:35.660Z - info: Using free license
+2022-03-18T02:27:35.687Z - info: Migrating templates chrome settings (waitForNetworkIddle -> waitForNetworkIdle)
+2022-03-18T02:27:35.689Z - info: Migration successful
+2022-03-18T02:27:35.691Z - debug: Creating samples is disabled
+2022-03-18T02:27:35.696Z - info: Initializing worker threads
+2022-03-18T02:27:35.700Z - debug: Extensions in workers: base, child-templates, components, data, express, handlebars, jsrender, localization, npm, pdf-utils, reports, text, version-control, assets, browser-client, chrome-pdf, docx, html-to-xlsx, pptx, scripts, static-pdf, studio, xlsx
+2022-03-18T02:27:36.155Z - info: 2 worker threads initialized in 459ms
+2022-03-18T02:27:36.155Z - info: Starting temp files cleanup with 180000ms threshold
+2022-03-18T02:27:36.157Z - info: reporter initialized
+2022-03-18T02:27:56.413Z - debug: OData query on templates
+2022-03-18T02:27:56.425Z - debug: OData query on folders
+2022-03-18T02:27:56.434Z - debug: OData query on components
+2022-03-18T02:27:56.445Z - debug: OData query on data
+2022-03-18T02:27:56.454Z - debug: OData query on tags
+2022-03-18T02:27:56.462Z - debug: OData query on assets
+2022-03-18T02:27:56.469Z - debug: OData query on scripts
+2022-03-18T02:27:56.515Z - debug: OData query on schedules
+2022-03-18T02:27:56.530Z - debug: OData query on settings
+2022-03-18T02:28:14.418Z - debug: OData insert into folders
+2022-03-18T02:28:43.228Z - debug: OData insert into data
+2022-03-18T02:28:43.247Z - debug: OData insert into templates
+2022-03-18T02:28:46.017Z - debug: Version control commit: local changes
+2022-03-18T02:28:46.117Z - debug: Version control diff for local changes
+2022-03-18T02:29:47.430Z - debug: OData update on data
+2022-03-18T02:29:47.456Z - debug: OData query on data
+2022-03-18T02:29:53.540Z - debug: OData update on templates
+2022-03-18T02:29:53.562Z - debug: OData query on templates
+2022-03-18T02:29:55.976Z - info: Starting rendering request 1 (user: null) rootId=spzwc7u3gj7j3v4, id=spzwc7u3gj7j3v4
+2022-03-18T02:29:55.978Z - info: Rendering template { name: cv-template, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=spzwc7u3gj7j3v4, id=spzwc7u3gj7j3v4
+2022-03-18T02:29:55.979Z - debug: Adding sample data VkTHE3CFW rootId=spzwc7u3gj7j3v4, id=spzwc7u3gj7j3v4
+2022-03-18T02:29:55.981Z - debug: Base url not specified, skipping its injection. rootId=spzwc7u3gj7j3v4, id=spzwc7u3gj7j3v4
+2022-03-18T02:29:55.982Z - debug: Rendering engine handlebars rootId=spzwc7u3gj7j3v4, id=spzwc7u3gj7j3v4
+2022-03-18T02:29:57.186Z - debug: Executing recipe chrome-pdf rootId=spzwc7u3gj7j3v4, id=spzwc7u3gj7j3v4
+2022-03-18T02:29:58.315Z - debug: Converting with chrome HeadlessChrome/93.0.4577.82 using chrome-pool strategy rootId=spzwc7u3gj7j3v4, id=spzwc7u3gj7j3v4
+2022-03-18T02:29:58.620Z - debug: Page request: GET (document) file:///tmp/jsreport/autocleanup/7ecaf225-e455-4a49-9458-528175e71daf-chrome-pdf.html rootId=spzwc7u3gj7j3v4, id=spzwc7u3gj7j3v4
+2022-03-18T02:29:58.621Z - debug: Page request finished: GET (document) file:///tmp/jsreport/autocleanup/7ecaf225-e455-4a49-9458-528175e71daf-chrome-pdf.html rootId=spzwc7u3gj7j3v4, id=spzwc7u3gj7j3v4
+2022-03-18T02:29:58.622Z - debug: Running chrome with params {"printBackground":true,"timeout":60000,"margin":{}} rootId=spzwc7u3gj7j3v4, id=spzwc7u3gj7j3v4
+2022-03-18T02:29:58.623Z - debug: Skipping storing report. rootId=spzwc7u3gj7j3v4, id=spzwc7u3gj7j3v4
+2022-03-18T02:29:58.625Z - info: Rendering request 1 finished in 2774 ms rootId=spzwc7u3gj7j3v4, id=spzwc7u3gj7j3v4
+2022-03-18T02:30:03.915Z - debug: Version control commit: local changes
+2022-03-18T02:30:03.937Z - debug: Version control diff for local changes
+2022-03-18T02:30:16.201Z - debug: OData update on templates
+2022-03-18T02:30:16.215Z - debug: OData query on templates
+2022-03-18T02:30:18.656Z - info: Starting rendering request 2 (user: null) rootId=hnleixhxp9g9nlv, id=hnleixhxp9g9nlv
+2022-03-18T02:30:18.656Z - info: Rendering template { name: cv-template, recipe: chrome-pdf, engine: handlebars, preview: true } rootId=hnleixhxp9g9nlv, id=hnleixhxp9g9nlv
+2022-03-18T02:30:18.657Z - debug: Adding sample data VkTHE3CFW rootId=hnleixhxp9g9nlv, id=hnleixhxp9g9nlv
+2022-03-18T02:30:18.658Z - debug: Base url not specified, skipping its injection. rootId=hnleixhxp9g9nlv, id=hnleixhxp9g9nlv
+2022-03-18T02:30:18.658Z - debug: Rendering engine handlebars rootId=hnleixhxp9g9nlv, id=hnleixhxp9g9nlv
+2022-03-18T02:30:18.892Z - debug: Executing recipe chrome-pdf rootId=hnleixhxp9g9nlv, id=hnleixhxp9g9nlv
+2022-03-18T02:30:18.893Z - debug: Converting with chrome HeadlessChrome/93.0.4577.82 using chrome-pool strategy rootId=hnleixhxp9g9nlv, id=hnleixhxp9g9nlv
+2022-03-18T02:30:18.992Z - debug: Page request: GET (document) file:///tmp/jsreport/autocleanup/04b8da00-2a41-4cec-90d2-26fd90354480-chrome-pdf.html rootId=hnleixhxp9g9nlv, id=hnleixhxp9g9nlv
+2022-03-18T02:30:18.993Z - debug: Page request finished: GET (document) file:///tmp/jsreport/autocleanup/04b8da00-2a41-4cec-90d2-26fd90354480-chrome-pdf.html rootId=hnleixhxp9g9nlv, id=hnleixhxp9g9nlv
+2022-03-18T02:30:19.080Z - debug: Running chrome with params {"printBackground":true,"timeout":60000,"margin":{}} rootId=hnleixhxp9g9nlv, id=hnleixhxp9g9nlv
+2022-03-18T02:30:19.082Z - debug: Skipping storing report. rootId=hnleixhxp9g9nlv, id=hnleixhxp9g9nlv
+2022-03-18T02:30:19.086Z - info: Rendering request 2 finished in 433 ms rootId=hnleixhxp9g9nlv, id=hnleixhxp9g9nlv
+2022-03-18T02:30:32.701Z - debug: Version control commit: local changes
+2022-03-18T02:30:32.724Z - debug: Version control diff for local changes
+2022-03-18T02:30:39.371Z - debug: Version control commit: cv
+2022-03-18T02:30:39.449Z - debug: Version control commit: local changes
+2022-03-18T02:30:39.466Z - debug: Version control diff for local changes

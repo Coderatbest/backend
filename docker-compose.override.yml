@@ -8,4 +8,11 @@ services:
     volumes:
       - ./backend:/root/app/
       - ./backend:/home/django/app/
+  jsreport:
+    build: 
+      context: reports
+      dockerfile: dockerfile
+    volumes:
+      # - ./reports/data:/app/data
+      - ./reports/app/:/app/
     
