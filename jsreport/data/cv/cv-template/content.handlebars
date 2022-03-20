@@ -6,15 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         .profile{
-            background-image: url('{{profile.image}}');
+            /* background-image: url('{{profile.image}}'); */
+            background-image: url('https://res.cloudinary.com/dd7jrtxu5/image/upload/v1/media/images/users/profile/imagen_cjbso3_kyyu3y');
             background-repeat: no-repeat;
             background-size: 20vh 25vw;
             height: 20vh;
             width: 25vw;
         }
+        .row{
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+        }
+        .col{
+            display: flex;
+            flex-direction: column;
+        }
     </style>
 </head>
 <body>
-    <div class="profile"></div>
+    <div class="row">
+        <div class="col">
+            <div class="profile"></div>
+        </div>
+    </div>
 </body>
 </html>
