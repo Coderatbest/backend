@@ -1,5 +1,7 @@
-# django backend coderatbest.compip install django
-
+# django backend coderatbest.com
+```
+$ pip install django
+```
 ## create setup
 
 ```
