@@ -14,6 +14,7 @@ python3  manage.py startapp users
 python3  manage.py startapp utilies
 
 ```
+
 ## Add custom model user
 
 - edit file settings.py
@@ -30,7 +31,22 @@ more information https://github.com/jacobian/dj-database-url
 - db_pass=password
 - DB_URL=mysql://USER:PASSWORD@HOST:PORT/NAME
 
+note: change the values
+
+```bash
+#create .env
+echo "DB_ROOT_PASSWORD=root_password
+DB_PASSWORD=password
+DB_USER=$USER
+DB_HOST=db
+DB_NAME=coderatbest
+DB_PORT=3306
+" > .env
+
+```
+
 ### migrations
+
 ```
 docker-compose run api python manage.py makemigrations
 ```

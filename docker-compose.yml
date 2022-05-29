@@ -5,15 +5,18 @@ services:
       - "8000:8000"
     environment:
       ADMIN_URL: admin/
-      DATABASE_URL: ${DB_URL}
+      DATABASE_URL: "mysql://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}"
     depends_on:
       - db
-    restart: unless-stopped
+    # restart: unless-stopped
   db:
     image: mariadb:10.7.1
     environment:
-      MYSQL_ROOT_PASSWORD: ${db_pass}
-      MYSQL_DATABASE: coderatbest
+      MARIADB_USER: ${DB_USER}
+      MARIADB_PASSWORD: ${DB_PASSWORD}
+      MARIADB_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MARIADB_DATABASE: ${DB_NAME}
+    restart: unless-stopped
     volumes:
       - database:/var/lib/mysql
   adminer:
