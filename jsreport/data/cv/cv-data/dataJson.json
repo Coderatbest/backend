@@ -1,5 +1,6 @@
 {
     "username": "al3xdiaz",
+    "email":"alexleonel96@hotmail.com",
     "first_name": "alex",
     "last_name": "diaz",
     "is_active": true,
@@ -7,6 +8,7 @@
     "phone_number": "+1234567890",
     "profile": {
         "name": "Alex Diaz",
+        "jobs":"(Backend, Frontend, Dba, Sre)",
         "age": 25,
         "biography": [
             "Nacìo el 22 de noviembre de 1996, en San Pedro Sula, Cortes, Honduras. Hijo de Jose Anael Diaz Guevara y Mirian Suyapa Sierra Villamil.\r",
@@ -46,6 +48,13 @@
             }
         ],
         "last_login": "2022-02-08T03:29:41.971570Z"
+    },
+    "social_media":{
+        "linkedin":"al3xdiaz",
+        "github":"al3xdiaz",
+        "gitlab":"",
+        "instagram":"",
+        "facebook":""
     },
     "is_client": true,
     "user_created": null
