@@ -56,6 +56,29 @@
         "instagram":"",
         "facebook":""
     },
+    "education":[
+        "Platzi",
+        "UNAH-vs(Ingenieria en sistemas)"
+    ],
+    "areas":[
+        {
+            "title":"Backend",
+            "badges":[
+                "C#",
+                "Node js",
+                "Python",
+                "Java"
+            ]
+        },
+        {
+            "title":"Frontend",
+            "badges":[
+                "html, css y js",
+                "React js",
+                "Vue js"
+            ]
+        }
+    ],
     "is_client": true,
     "user_created": null
 }

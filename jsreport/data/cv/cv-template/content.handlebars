@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         body{
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             font-size: 14px;
             line-height: 1.42857143;
             color: #333;
+            background-image: url("{{ asset 'background.jpg' 'dataURI' }}");
+            background-repeat: no-repeat;
+            background-size: cover;
         }
         .profile{
             background-image: url('{{profile.image}}');
@@ -22,7 +26,6 @@
             margin: 20px;
             display: flex;
             flex-direction: row;
-            background-color: blueviolet;
         }
         .col{
             display: flex;
@@ -30,15 +33,13 @@
             justify-content: center;
             align-items: center;
             width: 100%;
-            background-color: cornflowerblue;
         }
         .col-1{
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            width: 25vw;
-            background-color: cornflowerblue;
+            width: 30vw;
         }
         .title{
             font-size: 2em;
@@ -52,6 +53,16 @@
         p{
             margin: 0%;
         }
+        .contact-info{
+            align-items: flex-start;
+            margin: 10px;
+        }
+        .contact-info div{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
     </style>
 </head>
 <body>
@@ -59,19 +70,49 @@
         <div class="col-1">
             <div class="profile"></div>
             <div class="col">
-                <p>{{email}}</p>
-                <p>{{social_media.linkedin}}</p>
-                <p>{{social_media.github}}</p>
-                <p>{{social_media.gitlab}}</p>
-                <p>{{phone_number}}</p>
+                <div class="col contact-info">
+                    <div>
+                        <i class="fa fa-brands fa-1x fa-linkedin"></i><p>{{social_media.linkedin}}</p>
+                    </div>
+                    <div>
+                        <i class="fa fa-solid fa-1x fa-github"></i><p>{{social_media.github}}</p>
+                    </div>
+                    <div>
+                        <i class="fa fa-solid fa-1x fa-envelope"></i><p>{{email}}</p>
+                    </div>
+                    <div>
+                        <i class="fa fa-solid fa-1x fa-phone"></i><p>{{phone_number}}</p>
+                    </div>
+                </div>
+                <div class="col contact-info">
+                    <p class="title">Educacion</p>
+                    <ul>
+                        {{#each education}}
+                            <li>{{this}}</li>
+                        {{/each}}
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="col">
             <div>
                 <p class="title">{{profile.name}}</p>
-                <p class="jobs">{{profile.jobs}}</p>                
+                <p class="jobs">{{profile.jobs}}</p>
             </div>
         </div>
+    </div>
+    <p class="title">Skills</p>
+    <div class="row">
+        {{#each areas}}
+        <div class="col">
+            <p class="subtitle">{{this.title}}</p>
+            <ul>
+                {{#each this.badges}}
+                    <li>{{this}}</li>
+                {{/each}}
+            </ul>
+        </div>
+        {{/each}}
     </div>
 </body>
 </html>
