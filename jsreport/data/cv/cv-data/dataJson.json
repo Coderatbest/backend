@@ -60,6 +60,15 @@
         "Platzi",
         "UNAH-vs(Ingenieria en sistemas)"
     ],
+    "experiencie":[
+        {
+            "title":"Backend Developer",
+            "company":"SignsCloud",
+            "date_from":"oct-2021",
+            "date_to":"-",
+            "description":"lorem ipsun"
+        }
+    ],
     "areas":[
         {
             "title":"Backend",

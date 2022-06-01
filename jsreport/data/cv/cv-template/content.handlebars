@@ -13,7 +13,7 @@
             color: #333;
             background-image: url("{{ asset 'background.jpg' 'dataURI' }}");
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size: 100vw 100vh;
         }
         .profile{
             background-image: url('{{profile.image}}');
@@ -54,14 +54,30 @@
             margin: 0%;
         }
         .contact-info{
+            display: flex;
+            flex-direction: column;
             align-items: flex-start;
             margin: 10px;
         }
         .contact-info div{
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
             align-items: center;
+            min-width: 30vw;
+        }
+        .contact-info div p{
+            margin-left: 15px;
+        }
+        .skills{
+            margin-left: 20px;
+        }
+        .left{
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+        .right{
+            justify-content: flex-end;
+            align-items: flex-end;
         }
     </style>
 </head>
@@ -99,20 +115,33 @@
                 <p class="title">{{profile.name}}</p>
                 <p class="jobs">{{profile.jobs}}</p>
             </div>
+            <div class="col left">
+                {{#each experiencie}}
+                    <div class="row">
+                        <div>
+                            <p class="title">{{this.title}}</p>
+                            <p class="subtitle">({{this.company}}) || {{this.date_from}} - {{this.date_to}}</p>
+                            <p class="subtitle">{{this.description}}</p>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
         </div>
     </div>
-    <p class="title">Skills</p>
-    <div class="row">
-        {{#each areas}}
-        <div class="col">
-            <p class="subtitle">{{this.title}}</p>
-            <ul>
-                {{#each this.badges}}
-                    <li>{{this}}</li>
-                {{/each}}
-            </ul>
+    <div class="skills">
+        <p class="title">Skills</p>
+        <div class="row">
+            {{#each areas}}
+            <div class="col">
+                <p class="subtitle">{{this.title}}</p>
+                <ul>
+                    {{#each this.badges}}
+                        <li>{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+            {{/each}}
         </div>
-        {{/each}}
     </div>
 </body>
 </html>
